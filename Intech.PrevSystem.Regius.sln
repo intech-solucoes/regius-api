@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intech.PrevSystem.Regius.API", "Intech.PrevSystem.Regius.API\Intech.PrevSystem.Regius.API.csproj", "{BDAEC8D0-F4AC-44FD-A0EE-650916791498}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrevSystem", "PrevSystem", "{8A400129-EC9F-45FC-B816-955F4617124A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Intech.PrevSystem.API", "..\prevsystem\Intech.PrevSystem.API\Intech.PrevSystem.API.shproj", "{11D947CE-05E2-41DB-8687-640404E96EF0}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Intech.PrevSystem.Dados", "..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.shproj", "{549415E4-D6A6-42B0-92B2-B30F6B2700F3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Intech.PrevSystem.Entidades", "..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.shproj", "{CE1AB52D-FDA8-41F8-975B-0D7BA605BD2E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Intech.PrevSystem.Negocio", "..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.shproj", "{A88CF162-E0EC-4213-9964-543ECA2BEE87}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Intech.PrevSystem.Regius.Negocio", "Intech.PrevSystem.Regius.Negocio\Intech.PrevSystem.Regius.Negocio.shproj", "{9CFD8A1D-31D2-47CB-BD86-B59BE768C663}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\prevsystem\Intech.PrevSystem.API\Intech.PrevSystem.API.projitems*{11d947ce-05e2-41db-8687-640404e96ef0}*SharedItemsImports = 13
+		..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.projitems*{549415e4-d6a6-42b0-92b2-b30f6b2700f3}*SharedItemsImports = 13
+		Intech.PrevSystem.Regius.Negocio\Intech.PrevSystem.Regius.Negocio.projitems*{9cfd8a1d-31d2-47cb-bd86-b59be768c663}*SharedItemsImports = 13
+		..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.projitems*{a88cf162-e0ec-4213-9964-543eca2bee87}*SharedItemsImports = 13
+		..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.projitems*{ce1ab52d-fda8-41f8-975b-0d7ba605bd2e}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDAEC8D0-F4AC-44FD-A0EE-650916791498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAEC8D0-F4AC-44FD-A0EE-650916791498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAEC8D0-F4AC-44FD-A0EE-650916791498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAEC8D0-F4AC-44FD-A0EE-650916791498}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11D947CE-05E2-41DB-8687-640404E96EF0} = {8A400129-EC9F-45FC-B816-955F4617124A}
+		{549415E4-D6A6-42B0-92B2-B30F6B2700F3} = {8A400129-EC9F-45FC-B816-955F4617124A}
+		{CE1AB52D-FDA8-41F8-975B-0D7BA605BD2E} = {8A400129-EC9F-45FC-B816-955F4617124A}
+		{A88CF162-E0EC-4213-9964-543ECA2BEE87} = {8A400129-EC9F-45FC-B816-955F4617124A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D234CEA-D249-442B-80E8-65467D6FBCF4}
+	EndGlobalSection
+EndGlobal
