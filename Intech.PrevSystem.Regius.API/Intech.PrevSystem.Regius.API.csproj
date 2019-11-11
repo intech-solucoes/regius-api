@@ -1,17 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>API.xml</DocumentationFile>
+    <NoWarn>1701;1702;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Intech.Lib.Dapper" Version="1.0.1" />
-    <PackageReference Include="Intech.Lib.Web" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Dapper\Intech.Lib.Dapper.csproj" />
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Email\Intech.Lib.Email.csproj" />
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.JWT\Intech.Lib.JWT.csproj" />
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.SMS\Intech.Lib.SMS.csproj" />
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Util\Intech.Lib.Util.csproj" />
+    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Web\Intech.Lib.Web.csproj" />
+    <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.csproj" />
   </ItemGroup>
 
   <Import Project="..\..\prevsystem\Intech.PrevSystem.API\Intech.PrevSystem.API.projitems" Label="Shared" />
@@ -19,8 +32,6 @@
   <Import Project="..\..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.projitems" Label="Shared" />
 
   <Import Project="..\..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.projitems" Label="Shared" />
-
-  <Import Project="..\..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.projitems" Label="Shared" />
 
   <Import Project="..\Intech.PrevSystem.Regius.Negocio\Intech.PrevSystem.Regius.Negocio.projitems" Label="Shared" />
 

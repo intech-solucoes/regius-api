@@ -1,5 +1,5 @@
 ﻿#region Usings
-using Intech.Lib.Web.JWT;
+using Intech.Lib.JWT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;

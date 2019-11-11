@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Intech.PrevSystem.Regius.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("")]
     [ApiController]
     public class VersaoController : BaseVersaoController
     {
