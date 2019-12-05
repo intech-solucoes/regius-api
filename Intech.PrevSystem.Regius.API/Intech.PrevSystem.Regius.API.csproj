@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <Version>0.0.3</Version>
+    <Version>0.0.5</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,14 +24,12 @@
     <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.SMS\Intech.Lib.SMS.csproj" />
     <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Util\Intech.Lib.Util.csproj" />
     <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Web\Intech.Lib.Web.csproj" />
+    <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.csproj" />
     <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.csproj" />
+    <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.csproj" />
   </ItemGroup>
 
   <Import Project="..\..\prevsystem\Intech.PrevSystem.API\Intech.PrevSystem.API.projitems" Label="Shared" />
-
-  <Import Project="..\..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.projitems" Label="Shared" />
-
-  <Import Project="..\..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.projitems" Label="Shared" />
 
   <Import Project="..\Intech.PrevSystem.Regius.Negocio\Intech.PrevSystem.Regius.Negocio.projitems" Label="Shared" />
 

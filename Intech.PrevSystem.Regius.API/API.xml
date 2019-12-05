@@ -64,7 +64,7 @@
             </parametros>
             <retorno tipo="LimiteContribuicaoEntidade" />
         </member>
-        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.BuscarFuncionario(System.String,System.String,System.String,System.DateTime)">
+        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.BuscarFuncionario(System.String,System.String,System.String,System.String)">
             <rota caminho="[action]/{cdEmpresa}/{numMatricula}/{cpf}/{dataNascimento}" tipo="GET" />
             <parametros>
                 <parametro nome="cdEmpresa" tipo="string" />
@@ -81,6 +81,20 @@
                 <parametro nome="numMatricula" tipo="string" />
             </parametros>
             <retorno tipo="any" lista="true" />
+        </member>
+        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.ExcluirArquivo(System.Decimal)">
+            <rota caminho="[action]/{oid}" tipo="GET" />
+            <parametros>
+                <parametro nome="oid" tipo="number" />
+            </parametros>
+            <retorno tipo="any" />
+        </member>
+        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.Inserir(Intech.PrevSystem.Entidades.AdesaoEntidade)">
+            <rota caminho="[action]" tipo="POST" />
+            <parametros>
+                <parametro nome="adesao" tipo="AdesaoEntidade" />
+            </parametros>
+            <retorno tipo="string" />
         </member>
         <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.ValidarCPF(System.String)">
             <rota caminho="[action]/{cpf}" tipo="GET" />
@@ -102,56 +116,6 @@
                 <parametro nome="email" tipo="string" />
             </parametros>
             <retorno tipo="string" />
-        </member>
-        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.Inserir(Intech.PrevSystem.Entidades.AdesaoEntidade)">
-            <rota caminho="[action]" tipo="POST" />
-            <parametros>
-                <parametro nome="adesao" tipo="AdesaoEntidade" />
-            </parametros>
-            <retorno tipo="string" />
-        </member>
-        <member name="M:Intech.PrevSystem.Negocio.Proxy.FichaFinanceiraProxy.BuscarResumoMesesPorFundacaoPlanoInscricaoAno(System.String,System.String,System.String,System.String)">
-            <summary>
-            Busca o resumo das contribuições do ano, onde o mês é exibido por extenso
-            </summary>
-            <param name="CD_FUNDACAO"></param>
-            <param name="CD_PLANO"></param>
-            <param name="NUM_INSCRICAO"></param>
-            <param name="ANO_REF"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Intech.PrevSystem.Negocio.Proxy.FichaFinanceiraProxy.BuscarSaldoPorFundacaoEmpresaPlanoInscricao(System.String,System.String,System.String,System.String)">
-            <summary>
-            Busca o saldo de contribuições do participante
-            </summary>
-            <param name="cdFundacao"></param>
-            <param name="cdPlano"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Intech.PrevSystem.Negocio.Proxy.FichaFinanceiraProxy.BuscarSaldoPorFundacaoEmpresaPlanoInscricaoFundo(System.String,System.String,System.String,System.String,System.String)">
-            <summary>
-            Busca o saldo de contribuições do participante
-            </summary>
-            <param name="cdFundacao"></param>
-            <param name="cdPlano"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Intech.PrevSystem.Negocio.Proxy.FichaFinanceiraProxy.BuscarSaldoPorFundacaoEmpresaPlanoInscricaoFundoPeriodo(System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime)">
-            <summary>
-            Busca o saldo de contribuições do participante
-            </summary>
-            <param name="cdFundacao"></param>
-            <param name="cdPlano"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Intech.PrevSystem.Negocio.Proxy.FichaFinanceiraProxy.BuscarSalarioContribuicaoPorFundacaoPlanoInscricao(System.String,System.String,System.String,System.String)">
-            <summary>
-            Busca o salário e o percentual de contribuição do participante por plano
-            </summary>
-            <param name="cdFundacao"></param>
-            <param name="cdPlano"></param>
-            <param name="numInscricao"></param>
-            <returns></returns>
         </member>
     </members>
 </doc>
