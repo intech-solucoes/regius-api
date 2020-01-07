@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -12,18 +12,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Intech.Lib.JWT" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Dapper\Intech.Lib.Dapper.csproj" />
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Email\Intech.Lib.Email.csproj" />
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.JWT\Intech.Lib.JWT.csproj" />
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.SMS\Intech.Lib.SMS.csproj" />
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Util\Intech.Lib.Util.csproj" />
-    <ProjectReference Include="..\..\Intech.Lib\Intech.Lib.Web\Intech.Lib.Web.csproj" />
     <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Dados\Intech.PrevSystem.Dados.csproj" />
     <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Entidades\Intech.PrevSystem.Entidades.csproj" />
     <ProjectReference Include="..\..\prevsystem\Intech.PrevSystem.Negocio\Intech.PrevSystem.Negocio.csproj" />

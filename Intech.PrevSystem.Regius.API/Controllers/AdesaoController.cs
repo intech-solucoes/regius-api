@@ -468,7 +468,7 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                         new AdesaoDependenteProxy().Inserir(dep);
                     }
 
-                    foreach(var doc in adesao.Documentos)
+                    foreach (var doc in adesao.Documentos)
                     {
                         var documento = new AdesaoDocumentoProxy().BuscarPorChave(doc.OID_ADESAO_DOCUMENTO);
                         documento.OID_ADESAO = oidAdesao;
@@ -511,7 +511,7 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                         new ItemTransacao("Percentual Contribuição", adesao.Contrib.VAL_CONTRIBUICAO.ToString()),
                     };
 
-                    foreach(var dep in adesao.Dependentes)
+                    foreach (var dep in adesao.Dependentes)
                     {
                         listaConteudo.Add(new ItemTransacao("Nome", dep.NOM_DEPENDENTE));
                         listaConteudo.Add(new ItemTransacao("CPF", dep.COD_CPF));
@@ -544,6 +544,26 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                 {
                     return BadRequest(ex.Message);
                 }
+            }
+        }
+
+        /// <rota caminho="[action]" tipo="POST" />
+        /// <parametros>
+        ///     <parametro nome="adesao" tipo="AdesaoEntidade" />
+        /// </parametros>
+        /// <retorno tipo="string" />
+        [HttpPost("[action]")]
+        public IActionResult Efetivar()
+        {
+            try
+            {
+
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
 
