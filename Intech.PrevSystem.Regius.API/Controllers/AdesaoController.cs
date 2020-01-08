@@ -325,10 +325,10 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                 var planoCV = new
                 {
                     CD_PLANO = "0003",
-                    DS_PLANO = "Plano CV",
+                    DS_PLANO = "Plano CV-03",
                     CPNB = "2000.0025-51",
-                    Texto = "<p>O Plano CV-03 teve início em 01/03/2000 e foi elaborado na modalidade de Contribuição Variável, com regras de benefício definido para os casos de risco (invalidez e morte) e com regras de contribuição definida para os benefícios programáveis (aposentadoria por tempo de contribuição e idade)</p>" +
-                            "<p>O participante do Plano CV-03 pode planejar seu benefício futuro, estabelecendo seu percentual de contribuição, que pode ser alterado a qualquer tempo, de acordo com seu planejamento pessoal.</p>" +
+                    Texto = "<p>O Plano CV-03 foi elaborado na modalidade de Contribuição Variável, tendo regras de benefício definido para casos de risco(aposentadoria por invalidez e morte) e de contribuição definida para benefícios programáveis(aposentadoria por tempo de contribuição e idade). O Plano começou a valer no dia 1º de março de 2000 e tem centenas de Participantes ativos e aposentados! </p>" +
+                            "<p>O participante que opta pelo Plano CV-03 consegue planejar seu benefício futuro ao estabelecer o seu próprio percentual de contribuição, que pode ser alterado a qualquer momento no futuro, de acordo com o seu planejamento pessoal.</p>" +
                             "<p>Consulte a <a href=\"http://www.regius.org.br/images/arquivos/Cartilhas/Cartilha_PlanoCV03_2017.pdf\" target=\"_blank\">Cartilha do Plano CV-03</a> e conheça as principais regras " +
                             "previstas no regulamento deste Plano.</p>"
                 };
@@ -349,8 +349,8 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                     CD_PLANO = "0005",
                     DS_PLANO = "Plano CD-05",
                     CPNB = "2017.0001-83",
-                    Texto = "<p>O Plano CD-05 teve início em 13/02/2017 e foi elaborado na modalidade de Contribuição Definida, tem como base de cálculo o montante constituído pelas contribuições vertidas para o seu custeio e o correspondente retorno líquido dos investimentos, apurado nos termos do Regulamento do Plano.</p>" +
-                            "<p>O participante do Plano CD-05 pode planejar seu benefício futuro, estabelecendo seu percentual de contribuição, que pode ser alterado a qualquer tempo, de acordo com seu planejamento pessoal.</p>" +
+                    Texto = "<p>O Plano CD-05 foi elaborado na modalidade de Contribuição Definida e tem como base de constituído pelas contribuições vertidas para o seu custeio e o correspondente retorno líquido dos investimentos, apurado de acordo com os termos do Regulamento do Plano.O CD-05 começou a valer no dia 13 de fevereiro de 2017 e já tem centenas de Participantes ativos e aposentados! </p>" +
+                            "<p>O participante que opta pelo Plano CD-05 consegue planejar seu benefício futuro ao estabelecer o seu próprio percentual de contribuição, que pode ser alterado a qualquer momento no futuro, de acordo com o seu planejamento pessoal.</p>" +
                             "<p>Consulte a <a href=\"http://www.regius.org.br/images/arquivos/Cartilhas/Cartilha_PlanoCD-05_2017.pdf\" target=\"_blank\">Cartilha do Plano CD-05</a> e conheça as principais regras " +
                             "previstas no regulamento deste Plano.</p>"
                 };
@@ -536,7 +536,7 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                         $"Sua solicitação está em análise e em breve será processada.<br/>" +
                         $"Atenciosamente," +
                         $"Equipe Regius";
-                    EnvioEmail.Enviar(emailConfig, adesao.COD_EMAIL, "REGIUS - Adesão On Line", texto);
+                    EnvioEmail.Enviar(emailConfig, adesao.COD_EMAIL, "REGIUS - Adesão On-Line", texto);
 
                     return Ok(protocolo);
                 }
