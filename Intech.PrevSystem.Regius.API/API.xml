@@ -96,6 +96,13 @@
             </parametros>
             <retorno tipo="string" />
         </member>
+        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.Efetivar">
+            <rota caminho="[action]" tipo="POST" />
+            <parametros>
+                <parametro nome="adesao" tipo="AdesaoEntidade" />
+            </parametros>
+            <retorno tipo="string" />
+        </member>
         <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.ValidarCPF(System.String)">
             <rota caminho="[action]/{cpf}" tipo="GET" />
             <parametros>

@@ -491,7 +491,7 @@ namespace Intech.PrevSystem.Regius.API.Controllers
                         new ItemTransacao("UF", adesao.DES_END_UF),
                         new ItemTransacao("RG", adesao.COD_RG),
                         new ItemTransacao("Órgão Expeditor", adesao.DES_ORGAO_EXPEDIDOR),
-                        new ItemTransacao("Emissão", adesao.DTA_EXPEDICAO_RG.Value.ToString("dd/MM/yyyy")),
+                        new ItemTransacao("Emissão", adesao.DTA_EXPEDICAO_RG.HasValue ? adesao.DTA_EXPEDICAO_RG.Value.ToString("dd/MM/yyyy") : null),
                         new ItemTransacao("Estado Civil", adesao.DES_ESTADO_CIVIL),
                         new ItemTransacao("Nome da Mãe", adesao.NOM_MAE),
                         new ItemTransacao("Nome do Pai", adesao.NOM_PAI),
