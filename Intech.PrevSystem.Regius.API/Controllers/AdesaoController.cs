@@ -380,39 +380,56 @@ namespace Intech.PrevSystem.Regius.API.Controllers
             }
         }
 
+        /// <rota caminho="[action]" tipo="POST" />
+        /// <parametros>
+        ///     <parametro nome="documento" tipo="AdesaoDocumentoEntidade" />
+        /// </parametros>
+        /// <retorno tipo="AdesaoDocumentoEntidade" />
+        [HttpPost("[action]")]
+        public IActionResult SalvarDocumento([FromBody] AdesaoDocumentoEntidade documento)
+        {
+            try
+            {
+                var oidArquivo = new AdesaoDocumentoProxy().Inserir(documento);
+                documento.OID_ADESAO_DOCUMENTO = oidArquivo;
+
+                return Ok(documento);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("[action]"), DisableRequestSizeLimit]
         [Consumes("multipart/form-data")]
         public IActionResult Upload([FromForm] FileUploadViewModel model)
         {
-            var file = model.File;
-
-            var guid = $"{Guid.NewGuid()}.{file.FileName.Split('.').Last()}";
-
-            var documento = new AdesaoDocumentoEntidade
+            try
             {
-                TXT_NOME_FISICO = guid,
-                TXT_TITULO = model.Nome
-            };
+                var file = model.File;
+                var nomeArquivo = $"{Guid.NewGuid()}.{file.FileName.Split('.').Last()}";
+                var diretorioUpload = Path.Combine(Environment.CurrentDirectory, "Upload");
 
-            var diretorioUpload = Path.Combine(Environment.CurrentDirectory, "Upload");
-
-            if (file.Length > 0)
-            {
-                if (!Directory.Exists(diretorioUpload))
-                    Directory.CreateDirectory(diretorioUpload);
-
-                string fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                string fullPath = Path.Combine(diretorioUpload, guid);
-                using (var stream = new FileStream(fullPath, FileMode.Create))
+                if (file.Length > 0)
                 {
-                    file.CopyTo(stream);
+                    if (!Directory.Exists(diretorioUpload))
+                        Directory.CreateDirectory(diretorioUpload);
+
+                    string fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    string fullPath = Path.Combine(diretorioUpload, nomeArquivo);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
                 }
 
-                var oidArquivo = new AdesaoDocumentoProxy().Inserir(documento);
-                documento.OID_ADESAO_DOCUMENTO = oidArquivo;
+                return Ok(nomeArquivo);
             }
-
-            return Ok(documento);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         /// <rota caminho="[action]/{oid}" tipo="GET" />

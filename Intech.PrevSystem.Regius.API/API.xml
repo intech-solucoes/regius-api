@@ -82,6 +82,13 @@
             </parametros>
             <retorno tipo="any" lista="true" />
         </member>
+        <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.SalvarDocumento(Intech.PrevSystem.Entidades.AdesaoDocumentoEntidade)">
+            <rota caminho="[action]" tipo="POST" />
+            <parametros>
+                <parametro nome="documento" tipo="AdesaoDocumentoEntidade" />
+            </parametros>
+            <retorno tipo="AdesaoDocumentoEntidade" />
+        </member>
         <member name="M:Intech.PrevSystem.Regius.API.Controllers.AdesaoController.ExcluirArquivo(System.Decimal)">
             <rota caminho="[action]/{oid}" tipo="GET" />
             <parametros>
